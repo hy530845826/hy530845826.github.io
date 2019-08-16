@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | Edua.hy Blog( ゜- ゜)つロ 乾杯~</title>
+  <title>解决babel导致webpack打包错误的问题 | Edua.hy Blog( ゜- ゜)つロ 乾杯~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Edua.hy Blog( ゜- ゜)つロ 乾杯~">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="一.解决问题1.1问题描述利用npm run bulid进行打包时，抛出Error: Cannot find module ‘@babel/core’&amp;amp;&amp;amp;Cannot find module ‘@babel/plugin-transform-react-jsx’问题发生的首先想到的是webpack.config.js配置环境有误，但反复核对后发现无误观察之中发现视频中的版本的bab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决babel导致webpack打包错误的问题">
+<meta property="og:url" content="http://yoursite.com/2019/08/16/解决babel导致webpack打包错误的问题/index.html">
 <meta property="og:site_name" content="Edua.hy Blog( ゜- ゜)つロ 乾杯~">
+<meta property="og:description" content="一.解决问题1.1问题描述利用npm run bulid进行打包时，抛出Error: Cannot find module ‘@babel/core’&amp;amp;&amp;amp;Cannot find module ‘@babel/plugin-transform-react-jsx’问题发生的首先想到的是webpack.config.js配置环境有误，但反复核对后发现无误观察之中发现视频中的版本的bab">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190815092937570-685479448.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190815094021941-1865322021.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190816140359036-999676679.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190815095958937-107241717.png">
+<meta property="og:updated_time" content="2019-08-16T06:13:16.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Edua.hy Blog( ゜- ゜)つロ 乾杯~">
+<meta name="twitter:title" content="解决babel导致webpack打包错误的问题">
+<meta name="twitter:description" content="一.解决问题1.1问题描述利用npm run bulid进行打包时，抛出Error: Cannot find module ‘@babel/core’&amp;amp;&amp;amp;Cannot find module ‘@babel/plugin-transform-react-jsx’问题发生的首先想到的是webpack.config.js配置环境有误，但反复核对后发现无误观察之中发现视频中的版本的bab">
+<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190815092937570-685479448.png">
   
     <link rel="alternative" href="/atom.xml" title="Edua.hy Blog( ゜- ゜)つロ 乾杯~" type="application/atom+xml">
   
@@ -140,76 +149,170 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-解决babel导致webpack打包错误的问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      解决babel导致webpack打包错误的问题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/16/解决babel导致webpack打包错误的问题/" class="archive-article-date">
+
+        
+        <a href="/2019/08/16/解决babel导致webpack打包错误的问题/" class="archive-article-date">
   	<time datetime="2019-08-16T05:37:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/16/解决babel导致webpack打包错误的问题/">解决babel导致webpack打包错误的问题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一-解决问题"><a href="#一-解决问题" class="headerlink" title="一.解决问题"></a>一.解决问题</h2><h3 id="1-1问题描述"><a href="#1-1问题描述" class="headerlink" title="1.1问题描述"></a>1.1问题描述</h3><p>利用npm run bulid进行打包时，抛出<font color="red">Error: <em>Cannot find module ‘@babel/core’&amp;&amp;Cannot find module ‘@babel/plugin-transform-react-jsx’</em></font><br>问题发生的首先想到的是webpack.config.js配置环境有误，但反复核对后发现无误<br>观察之中发现视频中的版本的babel-loader之前的版本是@7.1.5,而现在是@8.0.6<br><img src="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190815092937570-685479448.png" alt></p>
+<a id="more"></a>
+<h2 id="二-解决方法"><a href="#二-解决方法" class="headerlink" title="二.解决方法"></a>二.解决方法</h2><h3 id="2-1尝试性解决（回退版本）"><a href="#2-1尝试性解决（回退版本）" class="headerlink" title="2.1尝试性解决（回退版本）"></a>2.1尝试性解决（回退版本）</h3><p>首先进行尝试性的方法，试试安装@7.1.5版本的babel-loader后会有什么效果<br><code>cnpm i babel-loader@7.1.5</code><br>安装完成后，再在终端输入<br><code>npm run bulid</code><br>居然完全能运行成功<br><img src="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190815094021941-1865322021.png" alt></p>
+<h3 id="2-2寻找问题的根源所在？"><a href="#2-2寻找问题的根源所在？" class="headerlink" title="2.2寻找问题的根源所在？"></a>2.2寻找问题的根源所在？</h3><p>根据<a href="https://www.npmjs.com/package/babel-loader" title="babel-loader" target="_blank" rel="noopener">官方文档</a>所示：<strong>官方默认<font color="#A52A2A">babel-loader | babel</font> <font color="red">对应的版本需要一致</font></strong><br><img src="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190816140359036-999676679.png" alt></p>
+<h3 id="2-3解决问题！"><a href="#2-3解决问题！" class="headerlink" title="2.3解决问题！"></a>2.3解决问题！</h3><p><strong><font color="red">直接安装最新版本（对应）的babel-loader和babel</font></strong><br><code>npm install -D babel-loader @babel/core @babel/preset-env webpack</code><br><img src="https://img2018.cnblogs.com/blog/1767316/201908/1767316-20190815095958937-107241717.png" alt><br>这时候查看jason发现版本匹配，再尝试一下webpack打包，哇塞？成功解决</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/dsalipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/dswechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/16/解决babel导致webpack打包错误的问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/16/我的第一篇blog/" class="archive-article-date">
-  	<time datetime="2019-08-16T01:40:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/16/我的第一篇blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇blog</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/16/我的第一篇blog/">我的第一篇blog</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -232,8 +335,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
